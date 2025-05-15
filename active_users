@@ -5,7 +5,7 @@
     "end_hour": 22,
     "reciter_name": "Mishary Rashid Alafasy",
     "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy",
-    "last_interaction": "2025-04-22T23:18:53.544571"
+    "last_interaction": "2025-05-14T16:08:40.747908"
   },
   "2057375836": {
     "timezone": "America/New_York",
@@ -26,10 +26,10 @@
   "7063637139": {
     "timezone": "Europe/London",
     "start_hour": 4,
-    "end_hour": 20,
+    "end_hour": 22,
     "reciter_name": "Maher Muaiqly",
     "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.mahermuaiqly",
-    "last_interaction": "2025-04-08T11:19:23.622714"
+    "last_interaction": "2025-05-15T11:37:08.602345"
   },
   "1982093230": {
     "timezone": "UTC",
@@ -45,14 +45,6 @@
     "end_hour": 22,
     "reciter_name": "Mishary Rashid Alafasy",
     "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy",
-    "last_interaction": "2025-05-14T16:08:40.747908"
-  },
-  "7063637139": {
-    "timezone": "Europe/London",
-    "start_hour": 4,
-    "end_hour": 22,
-    "reciter_name": "Maher Muaiqly",
-    "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.mahermuaiqly",
-    "last_interaction": "2025-05-15T11:37:08.602345"
+    "last_interaction": "2025-05-15T12:38:58.779585"
   }
 }
