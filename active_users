@@ -46,5 +46,13 @@
     "reciter_name": "Mishary Rashid Alafasy",
     "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy",
     "last_interaction": "2025-05-14T16:08:40.747908"
+  },
+  "7063637139": {
+    "timezone": "Europe/London",
+    "start_hour": 4,
+    "end_hour": 22,
+    "reciter_name": "Maher Muaiqly",
+    "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.mahermuaiqly",
+    "last_interaction": "2025-05-15T11:37:08.602345"
   }
 }
