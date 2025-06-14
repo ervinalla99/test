@@ -54,5 +54,13 @@
     "reciter_name": "Maher Muaiqly",
     "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.mahermuaiqly",
     "last_interaction": "2025-05-15T20:11:26.182060"
+  },
+  "7063637139": {
+    "timezone": "Europe/London",
+    "start_hour": 4,
+    "end_hour": 22,
+    "reciter_name": "Maher Muaiqly",
+    "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.mahermuaiqly",
+    "last_interaction": "2025-06-14T17:27:02.811695"
   }
 }
