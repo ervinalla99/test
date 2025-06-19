@@ -476,9 +476,27 @@ app.layouts = {
       viewport,
     },
   },
+  small: {
+    template: `
+      "leftPanel viewport" 1fr
+      /minmax(80px, 16vw) 1fr
+    `,
+    elements: {
+      leftPanel,
+      viewport,
+    },
+  },
 };
 
-app.layout = "main";
+function updateAppLayout() {
+  if (window.innerWidth <= 1366) {
+    app.layout = "small";
+  } else {
+    app.layout = "main";
+  }
+}
+window.addEventListener("resize", updateAppLayout);
+updateAppLayout();
 
 viewportGrid.layouts = {
   main: {
@@ -500,6 +518,28 @@ viewportGrid.layouts = {
       elementDataPanel,
     },
   },
+  smallSecond: {
+    template: `
+      "empty elementDataPanel" 1fr
+      "toolbar elementDataPanel" auto
+      /1fr minmax(60px, 14vw)
+    `,
+    elements: {
+      toolbar,
+      elementDataPanel,
+    },
+  },
 };
 
-viewportGrid.layout = "main";
+function updateViewportGridLayout() {
+  if (window.innerWidth <= 1366) {
+    viewportGrid.layout = "main";
+    if (viewportGrid.layout === "second") {
+      viewportGrid.layout = "smallSecond";
+    }
+  } else {
+    viewportGrid.layout = "main";
+  }
+}
+window.addEventListener("resize", updateViewportGridLayout);
+updateViewportGridLayout();
