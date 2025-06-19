@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIM App</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <div class="logo-container">
+    <img src="/src/logo.png" alt="Logo" />
+  </div>
+
+  <style>
+    .logo-container {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      /* Adjust this value to place the logo next to the left panel */
+
+      /* Ensure it is above other elements */
+      background-color: rgba(255, 255, 255, 0.7);
+      /* Semi-transparent white background */
+      padding: 5px;
+      /* Add some padding around the logo */
+      border-radius: 5px;
+      /* Optional: Add some rounding to the corners */
+    }
+
+    .logo-container img {
+      width: 100px;
+      /* Adjust size as needed */
+      height: auto;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      overflow: hidden;
+    }
+
+    .options-menu {
+      position: fixed;
+      min-width: unset;
+      top: 5px;
+      right: 5px;
+      max-height: calc(100vh - 10px);
+    }
+
+    .phone-menu-toggler {
+      visibility: hidden;
+    }
+
+    /* Responsive panel styles */
+    .Plan-Nav,
+    .Cross-Section,
+    .Profile {
+      position: absolute;
+      outline: 2px solid #2ff598;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1000;
+      box-sizing: border-box;
+      transition: width 0.2s, height 0.2s, left 0.2s, top 0.2s;
+    }
+
+    .Plan-Nav {
+      bottom: 0;
+      left: 0;
+      width: 24vw;
+      min-width: 220px;
+      max-width: 100vw;
+      height: 35vh;
+      min-height: 180px;
+      max-height: 50vh;
+    }
+
+    .Cross-Section {
+      bottom: 35vh;
+      left: 0;
+      width: 24vw;
+      min-width: 220px;
+      max-width: 100vw;
+      height: 25vh;
+      min-height: 120px;
+      max-height: 40vh;
+      z-index: 1000;
+    }
+
+    .Profile {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 20vh;
+      min-height: 100px;
+      max-height: 30vh;
+    }
+
+    @media (max-width: 900px) {
+      .Plan-Nav, .Cross-Section {
+        width: 40vw;
+        min-width: 120px;
+      }
+      .Profile {
+        height: 18vh;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .Plan-Nav, .Cross-Section {
+        width: 98vw;
+        left: 1vw;
+        min-width: 0;
+        max-width: 100vw;
+      }
+      .Plan-Nav {
+        height: 30vh;
+        min-height: 80px;
+      }
+      .Cross-Section {
+        height: 20vh;
+        min-height: 60px;
+        bottom: 30vh;
+      }
+      .Profile {
+        height: 15vh;
+        min-height: 60px;
+      }
+    }
+
+    .hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .visible {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .resize-handle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fffbfb;
+      bottom: 0px;
+      right: 0px;
+      cursor: nwse-resize;
+      /* Cursor style for resizing */
+    }
+
+    .close-button {
+      position: absolute;
+      top: -5px;
+      right: 0px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    @media (max-width: 480px) {
+      .options-menu {
+        visibility: hidden;
+        bottom: 5px;
+        left: 5px;
+      }
+
+      .options-menu-visible {
+        visibility: visible;
+      }
+
+      .phone-menu-toggler {
+        visibility: visible;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <bim-grid id="app"></bim-grid>
+  <script type="module" src="/src/main.ts"></script>
+  <bim-world-2d id="Plan-Nav" class="Plan-Nav hidden"></bim-world-2d>
+  <bim-world-2d id="Cross-Section" class="Cross-Section hidden"></bim-world-2d>
+  <bim-world-2d id="Profile" class="Profile hidden"></bim-world-2d>
+  <link rel="stylesheet"
+    href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <df-messenger project-id="famous-elevator-420911" agent-id="d0cc978f-a393-40c5-8373-9aa378756fd4" language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat-bubble chat-title="App-Interaction Chatbot">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+  <style>
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans;
+      --df-messenger-chat-background: #f3f6fc42;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #aaecee;
+      bottom: 16px;
+      right: 16px;
+    }
+
+    @media (min-width: 901px) {
+      df-messenger {
+        --df-messenger-chat-window-width: 18vw;
+        --df-messenger-chat-window-height: 60vh;
+      }
+    }
+  </style>
+</body>
+
+</html>
