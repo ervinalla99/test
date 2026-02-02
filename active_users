@@ -54,5 +54,13 @@
     "reciter_name": "Abu Bakr Al-Shaatree",
     "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.shaatree",
     "last_interaction": "2025-10-24T02:51:07.154267"
+  },
+  "5424068722": {
+    "timezone": "Europe/Paris",
+    "start_hour": 8,
+    "end_hour": 22,
+    "reciter_name": "Mishary Rashid Alafasy",
+    "reciter_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy",
+    "last_interaction": "2026-02-02T20:19:33.170787"
   }
 }
